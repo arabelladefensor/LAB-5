@@ -1,0 +1,112 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "EzLgwWR0H14O"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "data = pd.DataFrame({\n",
+        "    \"Name\": [\"Ara\", \"Myca\", \"Julie\", \"Neslie\", \"Chen\", \"Aira\", \"Arje\", \"Dhan\", \"Rena\", \"Nonna\",\n",
+        "             \"Clarenz\", \"Mae\", \"Denzel\", \"Jolly\", \"Elnor\", \"Jarrah\", \"Mary\", \"Lyca\", \"Remy\", \"Zane\"],\n",
+        "    \"Age\": [25, 30, 35, 40, 28, 22, 27, 45, 20, 50, 19, 56, 90, 24, 54, 22, 31, 29, 60, 48],\n",
+        "    \"Salary\": [50000, 60000, 70000, 80000, 90000, 1000, 20000, 35000, 55000, 120000,\n",
+        "               30000, 85000, 95000, 110000, 45000, 47000, 65000, 57000, 74000, 68000],\n",
+        "    \"Position\": [\"Engineer\", \"Manager\", \"Analyst\", \"Director\", \"Clerk\", \"HR\", \"Developer\", \"Sales\",\n",
+        "                 \"Consultant\", \"Technician\", \"Engineer\", \"Manager\", \"Analyst\", \"Director\", \"Clerk\",\n",
+        "                 \"HR\", \"Developer\", \"Sales\", \"Consultant\", \"Technician\"]\n",
+        "})"
+      ],
+      "metadata": {
+        "id": "DKV3xTRJYvGa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Dataset:\")\n",
+        "print(data)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iL6pJiOuYwXP",
+        "outputId": "84895be7-d48d-4506-966d-583c10798459"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dataset:\n",
+            "       Name  Age  Salary    Position\n",
+            "0       Ara   25   50000    Engineer\n",
+            "1      Myca   30   60000     Manager\n",
+            "2     Julie   35   70000     Analyst\n",
+            "3    Neslie   40   80000    Director\n",
+            "4      Chen   28   90000       Clerk\n",
+            "5      Aira   22    1000          HR\n",
+            "6      Arje   27   20000   Developer\n",
+            "7      Dhan   45   35000       Sales\n",
+            "8      Rena   20   55000  Consultant\n",
+            "9     Nonna   50  120000  Technician\n",
+            "10  Clarenz   19   30000    Engineer\n",
+            "11      Mae   56   85000     Manager\n",
+            "12   Denzel   90   95000     Analyst\n",
+            "13    Jolly   24  110000    Director\n",
+            "14    Elnor   54   45000       Clerk\n",
+            "15   Jarrah   22   47000          HR\n",
+            "16     Mary   31   65000   Developer\n",
+            "17     Lyca   29   57000       Sales\n",
+            "18     Remy   60   74000  Consultant\n",
+            "19     Zane   48   68000  Technician\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mean_salary= data[\"Salary\"].mean()\n",
+        "std_salary= data[\"Salary\"].std()\n",
+        "threshold= 1.5"
+      ],
+      "metadata": {
+        "id": "2R11E_pLYzs5"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
